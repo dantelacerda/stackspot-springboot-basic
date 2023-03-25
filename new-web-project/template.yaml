@@ -6,7 +6,7 @@ inputs:
   - label: Springboot Version
     type: text
     name: spring_boot_version
-    default: 3.0.5
+    default: 2.6.7
   - label: Nome do Projeto
     type: text
     name: nome_projeto
