@@ -1,0 +1,30 @@
+name: new-web-project
+description: Templase for basic web projects with Springboot
+types:
+  - app-template
+inputs:
+  - label: Springboot Version
+    type: text
+    name: spring_boot_version
+    default: 3.0.5
+  - label: Nome do Projeto
+    type: text
+    name: nome_projeto
+  - label: Descricao
+    type: text
+    name: descricao_projeto  
+  - label: Group id
+    type: text
+    name: group_id
+  - label: Artifact id
+    type: text
+    name: artifact_id
+  - label: Version
+    type: text
+    name: version
+    default: 0.0.1-SNAPSHOT   
+
+computedInputs:
+  "pacote_base": "{{inputs.group_id}}.{{inputs.artifact_id}}"
+  "pasta": "{{computed_inputs.pacote_base | replace('.','/')}}"
+    
